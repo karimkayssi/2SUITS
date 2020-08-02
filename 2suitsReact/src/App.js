@@ -12,7 +12,7 @@ import Language from './language.PNG';
 import Professional from './professional.PNG';
 import Personal from './personal.PNG';
 import Contact from './Contact';
-import { Modal, Row, Col } from 'react-bootstrap'
+import { Modal, Row, Col } from 'react-bootstrap';  
 
 var sectionStyle = {
 
@@ -125,7 +125,7 @@ class App extends Component {
             <Modal.Title>Sign up to continue</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <a href="#">Sign up</a>
+            <a href="/signup">Sign up</a>
           </Modal.Body>
         </Modal>
       </>

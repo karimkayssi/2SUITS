@@ -23,7 +23,7 @@ const ProjectDetails = (props) => {
                     {/* style={{ height: "50px", overflow: "auto" }} */}
                     <p>{props.tagline}</p>
                 </div>
-                <div className="img-hover-zoom" >
+                <div className="" >
                     <img src={props.img} style={imgSize} />
                 </div>
                 <div className="card z-depth-0">

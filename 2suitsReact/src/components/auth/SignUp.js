@@ -12,7 +12,7 @@ class SignUp extends Component {
     handleChange = (e) => {
         //console.log(e);
         this.setState({
-            [e.target.id] : e.target.value
+            [e.target.id]: e.target.value
         })
     }
     handleSubmit = (e) => {
@@ -22,7 +22,7 @@ class SignUp extends Component {
     }
     render() {
         return (
-            <div className="container" style={{paddingTop:'100px', width:"500px"}}>
+            <div className="container" style={{ paddingTop: '100px', width: "500px" }}>
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
@@ -50,6 +50,9 @@ class SignUp extends Component {
                         <Button variant="outline-primary">Sign Up</Button>
                     </div>
                 </form>
+                <div>
+                   <p>If you already have an account, <a href="/signin">click here</a> to log in </p>
+                </div>
             </div>
         )
     }

@@ -31,12 +31,12 @@ const MainBar = (props) => {
 
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="ml-auto" >
-                    <Nav.Link href="#profile" style={{ color: 'black' }}>Profile</Nav.Link>
-                    <Nav.Link href="#dashboard" style={{ color: 'black' }}>Dashboard</Nav.Link>
-                    <Nav.Link href="#matches" style={{ color: 'black' }}>My Matches</Nav.Link>
-                    <Nav.Link href="#wallet" style={{ color: 'black' }}>Wallet</Nav.Link>
-                    <Nav.Link href="#about" style={{ color: 'black' }}>About Us</Nav.Link>
-                    <Nav.Link href="#logout" style={{ color: 'black' }}>Log Out</Nav.Link>
+                    <Nav.Link href="/profile" style={{ color: 'black' }}>Profile</Nav.Link>
+                    <Nav.Link href="/dashboard" style={{ color: 'black' }}>Dashboard</Nav.Link>
+                    <Nav.Link href="/matches" style={{ color: 'black' }}>My Matches</Nav.Link>
+                    <Nav.Link href="/wallet" style={{ color: 'black' }}>Wallet</Nav.Link>
+                    <Nav.Link href="/about" style={{ color: 'black' }}>About Us</Nav.Link>
+                    <Nav.Link href="/signin" style={{ color: 'black' }}>Log In</Nav.Link>
                     <Nav.Link><img src={Avatar} height="30" /></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
