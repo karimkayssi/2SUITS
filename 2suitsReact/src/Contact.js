@@ -15,21 +15,21 @@ const Contact = () => {
             <div className="row" style={{ width: "100%", margin: "0px" }} >
                 <div className="col-6 p-5">
                     <h4>Contact Us</h4>
-                    <p>500 Francois Street <br />
-                San Francisco</p>
+                    <p>Jean D'arc Street <br />
+                Beirut, Lebanon</p>
                     <p>Tel: 03012345 <br /> Fax: 012345678</p>
                 </div>
                 <div className="col-6 p-4">
                     <div className="form-group" >
-                        <label style={{ fontSize: '16px', color: 'black' }}>Your Name</label>
+                        <label style={{ fontSize: '16px', color: 'black' }}></label>
                         <input className="form-control" type="text" placeholder="Name" />
                     </div>
                     <div className="form-group" >
-                        <label style={{ fontSize: '16px', color: 'black' }}>Your Email</label>
+                        <label style={{ fontSize: '16px', color: 'black' }}></label>
                         <input className="form-control" type="text" placeholder="Email" />
                     </div>
                     <div className="form-group" >
-                        <label style={{ fontSize: '16px', color: 'black' }}>How can we help ?</label>
+                        <label style={{ fontSize: '16px', color: 'black' }}></label>
                         <input className="form-control" type="text" placeholder="Message" />
                     </div>
                     <div style={{ alignContent: "center" }} className="text-right">

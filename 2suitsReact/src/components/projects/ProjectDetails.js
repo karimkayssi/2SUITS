@@ -3,10 +3,7 @@ import React from 'react';
 import "./ProjectDetails.css";
 
 var imgSize = {
-    width: '296px',
-    height: '200px',
-    marginTop: '-14px',
-    marginLeft: '-15px',
+    width: '100%',
 }
 
 const ProjectDetails = (props) => {
@@ -15,17 +12,37 @@ const ProjectDetails = (props) => {
             border: "#202020 5px solid",
             maxWidth: '300px',
             backgroundColor: '#f4f4ff',
-            display: 'inline-block'
+            display: 'inline-block',
+            cursor: 'pointer',
         }}>
-            <div className="container section project-details">
+            <div className="container section project-details" style={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                overflow: 'hidden',
+                height: '380px'
+            }}>
                 <div className=" z-depth-0">
-                    <span className="card-title" style={{ fontSize: 18 }}>{props.title}</span>
-                    {/* style={{ height: "50px", overflow: "auto" }} */}
-                    <p>{props.tagline}</p>
+                    <span className="card-title" style={{ fontSize: 18, overflow: 'hidden', textOverflow: 'ellipsis' }}>{props.title}</span>
                 </div>
-                <div className="" >
-                    <img src={props.img} style={imgSize} />
+                <br />
+                <div style={{
+                    overflow: 'hidden',
+                    marginRight: '-17px',
+                }}>
+                    <p style={{
+                        width: '100%',
+                        height: '100%',
+                        overflowY: 'scroll',
+                        paddingRight: '17px',
+                        boxSizing: 'content-box'
+                    }}>
+                        {props.tagline}
+                    </p>
                 </div>
+                <br />
+                <div style={{ flex: 1 }}></div>
+                <img src={props.img} style={imgSize} />
                 <div className="card z-depth-0">
                 </div>
             </div>

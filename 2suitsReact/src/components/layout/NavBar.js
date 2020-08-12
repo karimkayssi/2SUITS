@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLLink, withRouter } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 import "./NavBar.css";
-import { Navbar, Nav, Button, Form, FormControl } from 'react-bootstrap';
+import { Navbar, Nav, Button, Modal, Form, FormControl } from 'react-bootstrap';
 import Avatar from '../../avatar.png';
 
 
 const MainBar = (props) => {
+
     return (
         // <withRouter>
         // <nav className="text-dark-children" style={{backgroundColor:"rgba(255,255,255, 0.8)", position:"fixed", zIndex: "999" }}>
@@ -37,12 +38,10 @@ const MainBar = (props) => {
                     <Nav.Link href="/wallet" style={{ color: 'black' }}>Wallet</Nav.Link>
                     <Nav.Link href="/about" style={{ color: 'black' }}>About Us</Nav.Link>
                     <Nav.Link href="/signin" style={{ color: 'black' }}>Log In</Nav.Link>
-                    <Nav.Link><img src={Avatar} height="30" /></Nav.Link>
+                    <Nav.Link onClick={props.openSideBar} ><img src={Avatar} height="30" data-toggle="modal" data-target="#myModal2" /></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-
-
         // </withRouter>
     )
 }

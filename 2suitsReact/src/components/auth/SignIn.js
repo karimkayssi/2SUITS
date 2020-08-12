@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 class SignIn extends Component {
     state = {
         email: '',
-        password: ''
+        password: '',
+        rememberMe: false
     }
     handleChange = (e) => {
         //console.log(e);
@@ -18,6 +19,12 @@ class SignIn extends Component {
         e.preventDefault();
         console.log(this.state);
     }
+
+    handleCheck = (e) => {
+        // console.log('called');
+        this.setState({ rememberMe: e.target.checked });
+    }
+
     render() {
         return (
             <div className="container" style={{ paddingTop: '100px', width: "500px" }}>
@@ -31,23 +38,32 @@ class SignIn extends Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" id="password" onChange={this.handleChange} />
                     </div>
-                    
-                    <div class="control-group">
+                    {/* <div class="control-group">
                         <div class="controls">
                             <label class="checkbox"> Remember Me </label>
-                            <input type="checkbox" /> 
-                            </div>
+                            <input type="checkbox" />
                         </div>
-                        
-                        <div className="input-field">
-                            {/* <button className="btn pink lighten-1 z-depth-0">Login</button> */}
-                            <Button variant="outline-primary">Login</Button>
-                        </div>
-                        <div>
-                            <a href="/signup">Sign up </a> with a new account
+                    </div> */}
+
+
+                    {/* <div>
+                    <label class="container">Remember Me
+                        <input type="checkbox" checked="checked" />
+                        <span class="checkmark"></span>
+                    </label>
+                        </div> */}
+
+                    <div>
+                        <input type="checkbox" checked={this.state.rememberMe} onChange={this.handleCheck} /> Remember Me <br />
+                    </div>
+                    <div className="input-field">
+                        <Button variant="outline-primary">Login</Button>
+                    </div>
+                    <div>
+                        <a href="/signup">Sign up </a> with a new account.
                     </div>
                 </form>
-                        </div>
+            </div>
         )
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 class SignUp extends Component {
     state = {
@@ -51,7 +52,7 @@ class SignUp extends Component {
                     </div>
                 </form>
                 <div>
-                   <p>If you already have an account, <a href="/signin">click here</a> to log in </p>
+                   <p>If you already have an account, <a href="/signin">click here</a> to log in. </p>
                 </div>
             </div>
         )
