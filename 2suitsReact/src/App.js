@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Dashboard from './components/dashboard/Dashboard';
 import MainBar from './components/layout/NavBar';
 import Suit from './suit.PNG';
@@ -36,7 +36,7 @@ var slogan = {
 }
 
 class App extends Component {
-  
+
   state = {
     isOpen: false,
     isAvatarClicked: false
@@ -87,39 +87,46 @@ class App extends Component {
                         <h3 style={{ letterSpacing: 12, fontSize: 50, color: 'black', fontWeight: "bold", marginLeft: '150px' }}>START EXPLORING</h3>
                         <Row>
                           <Col>
-                            <div style={Explore} onClick={() => this.setOpen(true)}>
+                            <div style={Explore}>
                               <center>
-                                <ProjectDetails tagline="Language Discovery has developed a revolutionary new product, it enables students to learn second languages in an engaging and fun manner." title={<b>Language Discovery</b>} img={Language} openModal={() => this.setOpen(true)} />
+                                <Link to="/signup">
+                                  <ProjectDetails tagline="Language Discovery has developed a revolutionary new product, it enables students to learn second languages in an engaging and fun manner." title={<b>Language Discovery</b>} img={Language} openModal={() => this.setOpen(true)} />
+                                </Link>
                               </center>
                             </div>
                           </Col>
                           <Col>
-                            <div style={Explore} onClick={(path='/signin') => path='/signin'}>
-                            {/* onClick={() => this.setOpen(true)} */}
+                            <div style={Explore}>
                               <center>
-                                <ProjectDetails tagline="Professional empowerment is about choices and the value you place on yourself, the skills you have and what contribution you bring to the table " title={<b>Professional Empowerment</b>} fontSize='9' img={Professional} openModal={() => this.setOpen(true)} />
+                                <Link to="/signup">
+                                  <ProjectDetails tagline="Professional empowerment is about choices and the value you place on yourself, the skills you have and what contribution you bring to the table " title={<b>Professional Empowerment</b>} fontSize='9' img={Professional} openModal={() => this.setOpen(true)} />
+                                </Link>
                               </center>
                             </div>
                           </Col>
                           <Col>
-                            <div style={Explore} onClick={() => this.setOpen(true)}>
+                            <div style={Explore}>
                               <center>
-                                <ProjectDetails tagline="Personal development is a lifelong process. It is a way for people to assess their skills and qualities, consider their aims in life and set goals in order to " title={<b>Personal Development</b>} img={Personal} openModal={() => this.setOpen(true)} />
+                                <Link to="/signup">
+                                  <ProjectDetails tagline="Personal development is a lifelong process. It is a way for people to assess their skills and qualities, consider their aims in life and set goals in order to " title={<b>Personal Development</b>} img={Personal} openModal={() => this.setOpen(true)} />
+                                </Link>
                               </center>
                             </div>
                           </Col>
                         </Row>
-                        <div className="text-center">
-                          <button className="btn-lg"
-                            style={{ width: "160px", cursor: "pointer" }}
-                            onClick={() => this.setOpen(true)}>Join</button>
-                        </div>
+                        <Link to="/signup">
+                          <div className="text-center">
+                            <button className="btn-lg"
+                              style={{ width: "160px", cursor: "pointer" }}
+                              onClick={() => this.setOpen(true)}>Join</button>
+                          </div>
+                        </Link>
                       </div>
                       <br />
                       <br />
                       <Contact />
                     </div>
-                </Route>
+                  </Route>
                   <Router path='/signin'>
                     <SignIn />
                   </Router>
@@ -140,34 +147,44 @@ class App extends Component {
             display: this.state.avatarClicked ? "block" : "none",
             backgroundColor: "white",
             width: "300px",
-            height: "200px",
             border: "2px black solid",
             boxShadow: "3px 3px 5px gray",
             padding: "10px"
           }}>
-            <div className="row">
-            <div className="col-3">
-              <img src={Avatar} style={{width:"100%", marginTop:"5px"}} data-toggle="modal" data-target="#myModal2" />
-              </div>
-              <div className="col-9">
-                Karim Kayssi
-                karimkayssi.kk39@gmail.com
-          <br />
-          My profile
-          <br />
-          Sign out
-          </div>
+            <div className="text-center">
+              <img src={Avatar} style={{ width: "80px", marginTop: "5px" }} data-toggle="modal" data-target="#myModal2" />
+              <br />
+              <br />
+              Karim Kayssi
+              <br />
+              <br />
+              karimkayssi.kk39@gmail.com
+              <br />
+              Settings
+              <br />
+              <a href="/profile">My profile</a>
+              <br />
+              Sign out
+              <br />
+              <br />
+            </div>
+            <div className="row text-center">
+              <div className="col-6">Privacy Policy</div>
+              <div className="col-6">Terms of Services</div>
             </div>
           </div>
         </div>
-        <Modal show={this.state.isOpen} onHide={() => this.setOpen(false)}>
+        {/* <Modal show={this.state.isOpen} onHide={() => this.setOpen(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Sign up to continue</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <a href="/signup">Sign up</a>
+            <Router path="/signup">
+            <Link to="/signup">Sign up</Link>
+            </Router>
           </Modal.Body>
-        </Modal>
+        </Modal> */}
       </>
     );
   }

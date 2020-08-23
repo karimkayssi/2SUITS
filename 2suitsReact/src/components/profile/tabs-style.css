@@ -1,0 +1,30 @@
+.react-tabs__tab-list {
+  border-top: 0.5px solid lightgray;
+  border-bottom: 0.5px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+}
+
+.react-tabs__tab {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+}
+
+.react-tabs__tab.react-tabs__tab--selected {
+  border-bottom: 3px solid darkred;
+  font-weight: bold;
+}
+
+.react-tabs__tab:hover {
+  background-color: lightgray;
+}
+
+.react-tabs__tab:focus:after {
+  
+}

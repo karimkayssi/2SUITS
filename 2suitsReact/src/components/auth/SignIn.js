@@ -38,24 +38,12 @@ class SignIn extends Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" id="password" onChange={this.handleChange} />
                     </div>
-                    {/* <div class="control-group">
-                        <div class="controls">
-                            <label class="checkbox"> Remember Me </label>
-                            <input type="checkbox" />
+                        <div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="defaultUnchecked" />
+                            <label class="custom-control-label" style={{fontSize: "14px", color: "gray"}} for="defaultUnchecked">Remember Me</label>
                         </div>
-                    </div> */}
-
-
-                    {/* <div>
-                    <label class="container">Remember Me
-                        <input type="checkbox" checked="checked" />
-                        <span class="checkmark"></span>
-                    </label>
-                        </div> */}
-
-                    <div>
-                        <input type="checkbox" checked={this.state.rememberMe} onChange={this.handleCheck} /> Remember Me <br />
-                    </div>
+                        </div>
                     <div className="input-field">
                         <Button variant="outline-primary">Login</Button>
                     </div>

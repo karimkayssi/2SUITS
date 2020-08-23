@@ -4,6 +4,8 @@ import "./ProjectDetails.css";
 
 var imgSize = {
     width: '100%',
+    height: "150px",
+    objectFit: "cover"
 }
 
 const ProjectDetails = (props) => {
@@ -23,14 +25,14 @@ const ProjectDetails = (props) => {
                 height: '380px'
             }}>
                 <div className=" z-depth-0">
-                    <span className="card-title" style={{ fontSize: 18, overflow: 'hidden', textOverflow: 'ellipsis' }}>{props.title}</span>
+                    <span className="card-title text-dark" style={{ fontSize: 18, overflow: 'hidden', textOverflow: 'ellipsis' }}>{props.title}</span>
                 </div>
                 <br />
                 <div style={{
                     overflow: 'hidden',
                     marginRight: '-17px',
                 }}>
-                    <p style={{
+                    <p className="text-dark" style={{
                         width: '100%',
                         height: '100%',
                         overflowY: 'scroll',
